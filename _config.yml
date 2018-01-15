@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+locale: "en-US"
+title: "Michael Schermann"
+name: &name "Michael Schermann"
+description: &description "Personal Page"
+url: https://mschermann.github.io
