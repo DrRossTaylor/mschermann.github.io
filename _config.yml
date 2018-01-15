@@ -4,7 +4,10 @@ title: "Michael Schermann"
 name: &name "Michael Schermann"
 description: &description "Personal Page"
 url: https://mschermann.github.io
+repository: "mschermann/mschermann.github.io"
 timezone: America/Los_Angeles
+twitter:
+  username               : &twitter
 author:
   name: "Michael Schermann"
   bio: "That's funny..."
