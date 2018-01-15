@@ -4,3 +4,12 @@ title: "Michael Schermann"
 name: &name "Michael Schermann"
 description: &description "Personal Page"
 url: https://mschermann.github.io
+timezone: America/Los_Angeles
+author:
+  name: "Michael Schermann"
+  bio: "That's funny..."
+  location: "Santa Clara, CA, USA"
+  googlescholar: https://scholar.google.com/citations?user=cKUFV0sAAAAJ
+  github: "mschermann"
+  orcid: "http://orcid.org/yourorcidurl"
+  twitter: "m_icha"
