@@ -21,6 +21,9 @@ navbar:
       href: https://scholar.google.com/citations?user=cKUFV0sAAAAJ
     - icon: fa-twitter
       href: https://twitter.com/m_icha
+    - icon: fa-github
+      href: https://github.com/mschermann
+
 output:
   html_document:
     highlight: textmate
