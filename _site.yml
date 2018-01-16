@@ -1,0 +1,27 @@
+name: "Michael Schermann"
+output_dir: "."
+navbar:
+  title: "Michael Schermann"
+  type: inverse
+  right: 
+    - text: "cd ~"
+      icon: fa-home
+      href: index.html
+    - text: "Publications"
+      icon: fa-archive
+      href: publications.html
+    - text: "Teaching Experience"
+      icon: fa-university
+      href: teaching.html
+    - text: "CV"
+      icon: fa-paper-plane-o
+      href: about.html
+  left:
+    - icon: fa-graduation-cap
+      href: https://scholar.google.com/citations?user=cKUFV0sAAAAJ
+    - icon: fa-twitter
+      href: https://twitter.com/m_icha
+output:
+  html_document:
+    highlight: textmate
+    theme: readable

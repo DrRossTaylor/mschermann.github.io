@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Michael Schermann</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://scholar.google.com/citations?user=cKUFV0sAAAAJ">
+    <span class="fa fa-graduation-cap"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/m_icha">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    cd ~
+  </a>
+</li>
+<li>
+  <a href="publications.html">
+    <span class="fa fa-archive"></span>
+     
+    Publications
+  </a>
+</li>
+<li>
+  <a href="teaching.html">
+    <span class="fa fa-university"></span>
+     
+    Teaching Experience
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-paper-plane-o"></span>
+     
+    CV
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br/><br/></p>
+<div id="overview" class="section level3">
+<h3>.overview</h3>
+<ul>
+<li>h-index: 14 from 670 citation to 95 publications</li>
+<li>2017 Senior Scholar Best Information Systems Publication Award (<a href="https://aisnet.org/news/news.asp?id=380444">Link</a>)</li>
+<li>2014 Outstanding Paper Award - Americas Conference on Information Systems (AMCIS)</li>
+<li>2012 Best Practitioner-oriented Paper Award - Americas Conference on Information Systems (AMCIS)</li>
+<li>2009 Best Paper Award - 9th International Conference Wirtscha sinformatik</li>
+</ul>
+<p><br/></p>
+</div>
+<div id="peer-reviewed-journal-publications" class="section level3 tabset">
+<h3>.peer-reviewed journal publications</h3>
+<p>Schermann, M., Dongus, K., Yetton, P., and Krcmar, H. (2016): <a href="http://dx.doi.org/10.1016/j.jsis.2016.02.004">“The Role of Transaction Cost Economics in Information Technology Outsourcing Research: A Meta-analysis of the Choice of Contract Type”</a>, <a href="http://www.journals.elsevier.com/the-journal-of-strategic-information-systems">Journal of Strategic Information Systems</a> (25:1), 32-48.</p>
+<p>Goffart, K., Schermann, M., Kohl, C., Preiinger, J., and Krcmar, H. (2016): <a href="http://dx.doi.org/10.1080/10447318.2015.1085747">“Using the Default Option Bias to Influence Decision-Making While Driving”</a>, <a href="http://www.tandfonline.com/toc/hihc20/current">International Journal of Human-Computer Interaction</a> (32:1), 39-50.</p>
+<p>Hoermann, S., Hlavka, T., Schermann, M., and Krcmar, H. (2015): <a href="http://dx.doi.org/10.1057/jit.2014.13">“Determinants of Vendor Profitability in Two Contractual Regimes: An Empirical Analysis of Enterprise Resource Planning Projects”</a>, <a href="http://www.palgrave-journals.com/jit/index.html">Journal of Information Technology</a> (30:4), 325-336.</p>
+<p>Truschin, S., Schermann, M., Goswami, S., and Krcmar, H. (2014): <a href="http://dx.doi.org/10.1145/2544066">“Designing Interfaces for Multiple-Goal Environments: Experimental insights from In-Vehicle Speech Interfaces”</a>, <a href="http://tochi.acm.org">ACM Transactions on Computer-Human Interaction</a> (21:1), Article 7.</p>
+<p>Hoermann, S., Schermann, M., Aust, M., and Krcmar, H. (2014): <a href="http://dx.doi.org/10.4018/ijitpm.2014100101">“Risk Profiles in Individual Software Development and Packaged Software Implementation Projects: A Delphi Study at a German-Based Financial Services Company”</a>, <a href="http://www.igi-global.com/journal/international-journal-information-technology-project/1103">International Journal of Information Technology Project Management</a> (5:4), 1-23.</p>
+<p>Schermann, M., Wiesche, M., and Krcmar, H. (2012): <a href="http://dx.doi.org/10.2308/jmar-50240">“The Role of Information Systems in Supporting Exploitative and Exploratory Management Control Activities”</a>, <a href="http://aaapubs.org/loi/jmar">Journal of Management Accounting Research</a> (24:1), 31-59.</p>
+<p>Kristekova, Z., Jurisch, M. C., Schermann, M., and Krcmar, H. (2012): <a href="http://www.kmel-journal.org/ojs/index.php/online-publication/article/viewFile/216/161">“Consolidating Findings from Business Process Change Case Studies Using System Dynamics: The Example of Employee Morale”</a>, <a href="http://www.kmel-journal.org/ojs/">Knowledge Management &amp; E-Learning: An International Journal</a> (4:4), 455-480.</p>
+<p>Wolfson, A., Tavor, D., Mark, S., Schermann, M., and Krcmar, H. (2011): <a href="http://dx.doi.org/10.1287/serv.3.2.172">“Better Place: A Case Study of the Reciprocal Relations between Sustainability and Service”</a>, <a href="http://pubsonline.informs.org/journal/serv">Service Science</a> (3:2), 172-181.</p>
+<p>Wolfson, A., Tavor, D., Mark, S., Schermann, M., and Krcmar, H. (2010): <a href="http://dx.doi.org/10.1287/serv.2.4.216">“S3-Sustainability and Services Science: Novel Perspective and Challenge”</a>, <a href="http://pubsonline.informs.org/journal/serv">Service Science</a> (2:4), 216-224.</p>
+<p>Böhmann, T., Langer, P., and Schermann, M. (2008): <a href="http://dx.doi.org/10.1365/s11576-008-0047-8">“Systematische Überführung von kundenspezifischen IT-Lösungen in integrierte Produkt-Dienstleistungsbausteine mit der SCORE-Methode”</a>, <a href="http://link.springer.com/journal/12599">Wirtschaftsinformatik</a> (50:3), 196-207.</p>
+<p><br/><br/></p>
+</div>
+<div id="invited-journal-publications" class="section level3">
+<h3>.invited journal publications</h3>
+<p>Schermann, M., Yetton, P., and Krcmar, H. (2016): <a href="http://dx.doi.org/10.1016/j.jsis.2016.02.003">“A response to “Transaction Cost Economics on Trial Again””</a>, <a href="http://www.journals.elsevier.com/the-journal-of-strategic-information-systems">Journal of Strategic Information Systems</a> (25:1), 57-63.</p>
+<p>Schermann, M., Hemsen, H., Buchmüller, C., Bitter, T., Krcmar, H., Markl, V., and Hoeren, T. (2014): <a href="http://dx.doi.org/10.%201007/%20s11576-014-0434-2">“Big Data: An Interdisciplinary Opportunity for Information Systems Research”</a>, <a href="http://link.springer.com/journal/12599">Business &amp; Information Systems Engineering</a> (6:5), 261-266.</p>
+<p><br/><br/></p>
+</div>
+<div id="books-edited-books" class="section level3">
+<h3>.books &amp; edited books</h3>
+<p>Schermann, M. (2010): “Risk Service Engineering: Informationsmodelle für das Risikomanagement”. Wiesbaden, Germany: Gabler.</p>
+<p>Leimeister, J. M., Krcmar, H., Hoffmann, H., and Schermann, M. (eds.) (2010): <a href="https://www.amazon.com/Automotive-Services-German-Marco-Leimeister/dp/3839127084">“Automotive Services 2010”</a>. Norderstedt, Germany: Books on Demand.</p>
+<p>Schermann, M. (2008): “Strategische Frühaufklärung für Informationstechnologie: IT-Muster, Szenarioanalyse, Methode”. Düsseldorf, Germany: VDM.</p>
+<p><br/><br/></p>
+</div>
+<div id="peer-reviewed-conference-publications" class="section level3">
+<h3>.peer-reviewed conference publications</h3>
+<p>Röder, N., Wiesche, M., Schermann, M., and Krcmar, H. (2016): <a href="http://dx.doi.org/10.1109/HICSS.2016.640">“Toward an Ontology of Workarounds: A Literature Review on Existing Concepts”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Kauai, HI, USA.</p>
+<p>Kohl, C., Schermann, M., and Krcmar, H. (2016): <a href="http://aisel.aisnet.org/digit2016/14/">“The Effect of System Restrictions on Acceptance of Self-Driving Cars”</a>, <a href="http://aisel.aisnet.org/digit2016/">DIGIT in conjunction with ICIS 2016</a>, Dublin, Ireland.</p>
+<p>Wiesche, M., Schermann, M., and Krcmar, H. (2015): <a href="http://aisel.aisnet.org/icis2015/proceedings/ISgov/5">“Understanding the Enabling Design of IT Risk Management Processes”</a>, <a href="http://aisel.aisnet.org/icis/">International Conference on Information Systems</a>, Ft. Worth, TX, USA.</p>
+<p>Röder, N., Wiesche, M., Schermann, M., and Krcmar, H. (2015): <a href="http://aisel.aisnet.org/wi2015/33/">“Workaround Aware Business Process Modeling”</a>, <a href="http://aisel.aisnet.org/wi/">International Conference on Wirt-schafts-infor-matik</a>, Osnabrück, Germany.</p>
+<p>Dongus, K., Ebert, S., Schermann, M., and Krcmar, H. (2015): <a href="http://dx.doi.org/10.1109/HICSS.2015.536">“What Determines Information Systems Project Performance? A Narrative Review and Meta-analysis”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Kauai, HI, USA.</p>
+<p>Schermann, M., Lang, M., Hoermann, S., Swanson, B., and Krcmar, H. (2014): <a href="http://aisel.aisnet.org/icis2014/proceedings/ISStrategy/28/">“When Does Learning Pay Off? The Relationship of Organizational Learning and ITO Vendor Profitability”</a>, <a href="http://aisel.aisnet.org/icis/">International Conference on Information Systems</a>, Auckland, New Zealand.</p>
+<p>Rosenberg, Z., Jurisch, M. C., Schermann, M., and Krcmar, H. (2014): <a href="http://www.systemdynamics.org/conferences/2014/proceed/">“Using Case Survey Methodology to Extract Variables and Causal Links: An Example from Studying Business Process Change”</a>, <a href="http://www.systemdynamics.org/conferences/2014/">International Conference of the System Dynamics Society</a>, Delft, The Netherlands.</p>
+<p>Röder, N., Wiesche, M., Schermann, M., and Krcmar, H. (2014): <a href="http://aisel.aisnet.org/amcis2014/AdoptionofIT/GeneralPresentations/14/">“Why Managers Tolerate Workarounds: The Role of Information Systems”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, Savannah, GA, USA.</p>
+<p>Röder, N., Wiesche, M., and Schermann, M. (2014): <a href="http://aisel.aisnet.org/ecis2014/proceedings/track06/6/">“A Situational Perspective on Workarounds in IT-enabled Business Processes: A Multiple Case Study”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Tel Aviv, Israel.</p>
+<p>Röder, N., Schermann, M., and Krcmar, H. (2014): <a href="http://aisel.aisnet.org/amcis2014/ITOrganizationalAgility/GeneralPresentations/4/">“IT Enabled Agility in Organizational Ambidexterity”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, Savannah, GA, USA.</p>
+<p>Dongus, K., Yetton, P., Schermann, M., and Krcmar, H. (2014): <a href="http://aisel.aisnet.org/ecis2014/proceedings/track15/8/">“Transaction Cost Economics and Industry Maturity in It Outsourcing: A Meta-Analysis of Contract Type Choice”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Tel Aviv, Israel.</p>
+<p>Dongus, K., Ebert, S., Schermann, M., Yetton, P., and Krcmar, H. (2014): <a href="http://aisel.aisnet.org/icis2014/proceedings/ISGovernance/3/">“Control and Performance in IS Projects: A Meta-Analysis of Hierarchical and Market-based Control Relationships”</a>, <a href="http://aisel.aisnet.org/icis/">International Conference on Information Systems</a>, Auckland, New Zealand.</p>
+<p>Wiesche, M., Schermann, M., and Krcmar, H. (2013): <a href="http://dx.doi.org/10.1109/HICSS.2013.607">“When IT Risk Management Produces More Harm than Good: The Phenomenon of ‘Mock Bureaucracy’”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Wailea, HI, USA.</p>
+<p>Wiesche, M., Keskinov, H., Schermann, M., and Krcmar, H. (2013): <a href="http://dx.doi.org/10.1109/HICSS.2013.130">“Classifying Information Systems Risks: What Have We Learned So Far?”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Wailea, HI, USA.</p>
+<p>Schlachtbauer, T., Schermann, M., and Krcmar, H. (2013): <a href="http://aisel.aisnet.org/icis2013/proceedings/ResearchInProgress/37/">“Do Prototypes Hamper Innovative Behavior in Developing IT-based Services?”</a>, <a href="http://aisel.aisnet.org/icis/">International Conference on Information Systems</a>, Milan, Italy.</p>
+<p>Manner, J., Nienaber, D., Schermann, M., and Krcmar, H. (2013): <a href="http://aisel.aisnet.org/icmb2013/28/">“Limits of Imitating Marketplace Design: The Case of an Automotive Service Marketplace”</a>, <a href="http://aisel.aisnet.org/icmb/">International Conference on Mobile Business</a></p>
+<p>Manner, J., Nienaber, D., Schermann, M., and Krcmar, H. (2013): <a href="http://aisel.aisnet.org/wi2013/86/">“Six Principles for Governing Mobile Platforms”</a>, <a href="http://aisel.aisnet.org/wi/">International Conference on Wirt-schafts-infor-matik</a>, Leipzig, Germany.</p>
+<p>Manner, J., Kohl, C., Schermann, M., and Krcmar, H. (2013): <a href="http://www.thinkmind.org/index.php?view=article&amp;articleid=achi_2013_2_20_20236">“Effect of Non-Unified Interaction Design of In-Car Applications on Driving Performance, Situational Awareness and Task Performance”</a>, <a href="http://www.iaria.org/conferences2013/ACHI13.html">International Conference on Advances in Computer-Human Interactions</a>, Nice, France.</p>
+<p>Wiesche, M., Bodner, J., and Schermann, M. (2012): <a href="http://aisel.aisnet.org/ecis2012/176/">“Antecedents of IT-Enabled Organizational Control Mechanisms”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Barcelona, Spain.</p>
+<p>Manner, J., Nienaber, D., Schermann, M., and Krcmar, H. (2012): <a href="http://aisel.aisnet.org/icmb2012/14/">“Governance for Mobile Service Platforms: A Literature Review and Research Agenda”</a>, <a href="http://aisel.aisnet.org/icmb/">International Conference on Mobile Business</a></p>
+<p>Kristekova, Z., Riasanow, T., Schermann, M., and Krcmar, H. (2012): <a href="http://dx.doi.org/10.1109/HICSS.2012.603">“Towards Prioritizing IT Solution Developments through System Dynamics and Fuzzy Logic”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Maui, HI.</p>
+<p>Kristekova, Z., Brion, J., Schermann, M., and Krcmar, H. (2012): <a href="https://www.researchgate.net/publication/266858113_Simulation_Model_for_Cost-Benefit_Analysis_of_Cloud_Computing_versus_In-House_Datacenters">“Simulation Model for Cost-Benefit Analysis of Cloud Computing versus In-House Datacenters”</a>, <a href="https://en.wikipedia.org/wiki/Gesellschaft_f%C3%BCr_Informatik">Multikonferenz Wirtschaftsinformatik</a>, Braunschweig, Germany.</p>
+<p>Hoermann, S., Dongus, K., Schermann, M., and Krcmar, H. (2012): <a href="http://aisel.aisnet.org/icis2012/proceedings/ProjectManagement/5/">“Do Vendors Include Transaction Characteristics in Their Risk Estimation? An Empirical Analysis of ERP Projects”</a>, <a href="http://aisel.aisnet.org/icis/">International Conference on Information Systems</a>, Orlando, FL, USA.</p>
+<p>Hoermann, S., Aust, M., Schermann, M., and Krcmar, H. (2012): <a href="http://dx.doi.org/10.1109/HICSS.2012.168">“Comparing Risks in Individual Software Development and Standard Software Implementation projects: A Delphi Study”</a>, <a href="http://www.hicss.org">Hawaii International Conference on System Sciences</a>, Maui, HI, USA.</p>
+<p>Herzfeldt, A., Schermann, M., and Krcmar, H. (2012): <a href="http://aisel.aisnet.org/amcis2012/proceedings/OrganizationalIssuesIS/3/">“Seven principles for managing IT solutions from a provider’s perspective”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, Seattle, WA, USA.</p>
+<p>Wiesche, M., Schermann, M., and Krcmar, H. (2011): <a href="http://aisel.aisnet.org/ecis2011/4/">“Exploring the Contribution of Information Technology to Governance, Risk Management, and Compliance (GRC) Initiatives”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Helsinki, Finland.</p>
+<p>Truschin, S., Schlachtbauer, T., Zauner, A., Schermann, M., and Krcmar, H. (2011): <a href="http://dx.doi.org/10.1145/2381416.2381420">“Content Matters: Towards Handling E-Mail while Driving Safely”</a>, <a href="http://www.auto-ui.org">International Conference on Automotive User Interfaces and Interactive Vehicular Applications</a>, Salzburg, Austria.</p>
+<p>Sutter, M., Schermann, M., Hoermann, S., and Krcmar, H. (2011): <a href="http://aisel.aisnet.org/ecis2011/167/">“Calculating the Conditional Value at Risk in IS Projects: Towards a Single Measure of Project Risk”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Helsinki, Finland.</p>
+<p>Hoermann, S., Schermann, M., and Krcmar, H. (2011): <a href="http://aisel.aisnet.org/ecis2011/179/">“Variations in Risk Exposure: A Longitudinal Analysis of Enterprise Software Projects”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Helsinki, Finland.</p>
+<p>Hoermann, S., Schermann, M., and Krcmar, H. (2011): <a href="http://aisel.aisnet.org/wi2011/28/">“When to Manage Risks in IS Projects: An Exploratory Analysis of Longitudinal Risk Reports”</a>, <a href="http://aisel.aisnet.org/wi/">International Conference on Wirt-schafts-infor-matik</a>, Zurich, Switzerland.</p>
+<p>Herzfeldt, A., Kristekova, Z., Schermann, M., and Krcmar, H. (2011): <a href="http://aisel.aisnet.org/amcis2011_submissions/157/">“A Conceptual Framework of Requirements for the Development of E-learning Offerings from a Product Service System Perspective”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, Detroit, MI, USA.</p>
+<p>Schlachtbauer, T., Hoffmann, H., Pühler, M., Schermann, M., and Krcmar, H. (2010): “Qualitative Bewertung von Automotive Services durch Simulation”, Mobile und Ubiquitäre Informationssysteme, Göttingen, Germany.</p>
+<p>Pühler, M., Schermann, M., and Krcmar, H. (2010): “Theoriebasiertes partizipatives Design von Automotive Services”, Multikonferenz Wirtschaftsinformatik, Göttingen, Germany.</p>
+<p>Pauli, M., Schermann, M., and Krcmar, H. (2010): “The Risk-Aware Enterprise Architecture: Towards a Transparent Inventory of IT Risk Management Artifacts”, GI Jahrestagung, Leipzig, Germany.</p>
+<p>Kuckein, C., Schermann, M., Sunyaev, A., and Krcmar, H. (2010): <a href="http://aisel.aisnet.org/ecis2010/92/">“An Exploratory Study on Physicians’ Diligence when Dealing with Patient Data”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Pretoria, South Africa.</p>
+<p>Hörmann, S., Schermann, M., and Krcmar, H. (2010): “Eine Quantitative Perspektive auf die Priorität von Risikofaktoren in IT-Projekten”, Multikonferenz Wirtschaftsinformatik, Göttingen, Germany.</p>
+<p>Hoermann, S., Schermann, M., and Krcmar, H. (2010): <a href="http://aisel.aisnet.org/ecis2010/141/">“Towards Understanding the Relative Importance of Risk Factors in IS Projects: A Quantitative Perspective”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Pretoria, South Africa.</p>
+<p>Herzfeldt, A., Schermann, M., and Krcmar, H. (2010): <a href="http://aisel.aisnet.org/acis2010/35/">“Towards a Set of Requirements for a Holistic IT Solution Engineering Approach”</a>, <a href="http://aisel.aisnet.org/acis/">Australasian Conference on Information Systems</a>, Brisbane, Australia.</p>
+<p>Golcar, M., Schermann, M., Pühler, M., Hoffmann, H., and Krcmar, H. (2010): “Heuristische Ermittlung und Typisierung von Infrastrukturanforderungen mobiler Dienste im Fahrzeug”, Multikonferenz Wirtschaftsinformatik, Göttingen, Germany.</p>
+<p>Segin, C., Schermann, M., and Krcmar, H. (2009): <a href="http://aisel.aisnet.org/cgi/viewcontent.cgi?article=1048&amp;context=amcis2009">“Do Project Managers Compensate for Risk Controls? An Exploratory Study on Risk Behavior in IT Projects”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, San Francisco, CA, USA.</p>
+<p>Schermann, M., Gehlert, A., Krcmar, H., and Pohl, K. (2009): <a href="http://aisel.aisnet.org/ecis2009/198/">“Justifying Design Decisions with Theory-based Design Principles”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, Verona, Italy.</p>
+<p>Gehlert, A., Schermann, M., Pohl, K., and Krcmar, H. (2009): <a href="http://aisel.aisnet.org/wi2009/42/">“Towards a Research Method for Theory-driven Design Research”</a>, <a href="http://aisel.aisnet.org/wi/">international Conference on Wirt-schafts-infor-matik</a>, Vienna, Austria.</p>
+<p>Schermann, M., Prilla, M., Krcmar, H., and Herrmann, T. (2008): “Bringing Life into References Process Models: A Participatory Approach for Identifying, Discussing, and Resolving Model Adaptations”, Multikonferenz Wirtschaftsinformatik, Garching, Germany.</p>
+<p>Schermann, M., Böhmann, T., and Krcmar, H. (2007): <a href="http://aisel.aisnet.org/wi2007/67/">“Fostering the Evaluation of Reference Models: Application and Extension of the Concept of IS Design Theories”</a>, <a href="http://aisel.aisnet.org/wi/">International Conference on Wirt-schafts-infor-matik</a>, Karlsruhe, Germany.</p>
+<p>Schermann, M., Boehmann, T., and Krcmar, H. (2007): <a href="http://aisel.aisnet.org/ecis2007/181/">“A Pattern-based Approach for Constructing Design Theories with Conceptual Models”</a>, <a href="http://aisel.aisnet.org/ecis/">European Conference on Information Systems</a>, St. Gallen, Switzerland.</p>
+<p>Schermann, M., and Krcmar, H. (2006): “Modeling Information Technology: A Pattern Approach for Enhancing Technology Intelligence Processes”, Modellierung, Innsbruck, Austria.</p>
+<p>Schermann, M., Böhmann, T., and Krcmar, H. (2006): <a href="http://aisel.aisnet.org/amcis2006/312/A">“Integration of IT services: Towards a Pattern-based Approach for Eliciting Service Integration Requirements”</a>, <a href="http://aisel.aisnet.org/amcis/">Americas Conference on Information Systems</a>, Acapulco, Mexico.</p>
+<p>Pfeiffer, D., Schermann, M., Becker, J., and Krcmar, H. (2006): <a href="http://aisel.aisnet.org/pacis2006/19/">“A Structural Framework for Analyzing Information Technology”</a>, <a href="http://aisel.aisnet.org/pacis/">Pacific Asia Conference on Information Systems</a>, Kuala Lumpur, Malaysia.</p>
+<p>Schermann, M., Böhmann, T., and Krcmar, H. (2005): “Towards a Reuse of Product Related Concepts for Service Data Management: An Ontology Approach”, GI Jahrestagung, Bonn, Germany.</p>
+<p><br/><br/></p>
+</div>
+<div id="contributions-to-edited-books" class="section level3">
+<h3>.contributions to edited books</h3>
+<p>Manner, J., Schermann, M., and Krcmar, H. (2015): “Ausgewählte Prinzipien für die Steuerung von Plattformen” in Marktplätze im Umbruch, Linnhoff-Popien, C., Zaddach, M. and Grahl, A. (eds.). Berlin, Germany: Springer, pp. 459-466.</p>
+<p>Schermann, M., Wiesche, M., Hoermann, S., and Krcmar, H. (2014): “Information Technology Risks: An Interdisciplinary Challenge” in Risk: A Multidisciplinary Introduction, Klüppelberg, C., Straub, D. and Welpe, I.M. (eds.). Berlin, Germany: Springer, pp. 387-405.</p>
+<p>Goffart, K., Schermann, M., Kohl, C., Preißinger, J., and Krcmar, H. (2014): “Towards Identifying Contextual Factors on Parking Lot Decisions” in User Modeling, Adaptation, and Personalization, Dimitrova, V., Kuflik, T., Chin, D., Ricci, F., Dolog, P. and Houben, G.-J. (eds.). Berlin, Germany: Springer, pp. 320-325.</p>
+<p>Schlachtbauer, T., Stanzl, G., Pühler, M., Schermann, M., and Krcmar, H. (2012): “Smart Automotive Apps für kundenorientierte Dienstleistungen im Fahrzeug” in Smart Mobile Apps, Verclas, S. and Linnhoff-Popien, C. (eds.). Berlin, Germany: Springer, pp. 27-41.</p>
+<p>Schermann, M., Prilla, M., Herrmann, I. T., Bennewitz, S., and Krcmar, H. (2012): “The International Service Implementation Checkup (ISIC) Workshop” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 169-185.</p>
+<p>Schermann, M., Prilla, M., Böhmann, T., Krcmar, H., and Herrmann, I. T. (2012): “Designing Services as Adaptable Reference Models” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 275-292.</p>
+<p>Schermann, M., Böhmann, T., Reuter, U., and Krcmar, H. (2012): “Service Assessment for Identifying Adaptation Requirements” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 139-151.</p>
+<p>Schermann, M., Böhmann, T., Prilla, M., Herrmann, T., and Krcmar, H. (2012): “Service Modularization for Customer-Specific Service Design Based on Highly Standardized Services” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 101-118.</p>
+<p>Schermann, M., Böhmann, T., and Krcmar, H. (2012): “Foundations of Service Modularization: Towards a Design Theory for Productizing Solutions” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 309-328.</p>
+<p>Prilla, M., Schermann, M., Reuter, U., Herrmann, T., Krcmar, H., and Burr, W. (2012): “Organizing International Service Management: The Case of M-BETA” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 213-227.</p>
+<p>Prilla, M., Schermann, M., Herrmann, I. T., and Krcmar, H. (2012): “Process modeling with SeeMe: a modeling method for service processes” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 67-81.</p>
+<p>Prilla, M., Reuter, U., Schermann, M., Jahnke, I., Bennewitz, S., Herrmann, T., Burr, W., and Krcmar, H. (2012): “Preparing for Service Export: The Case of M-GAMMA” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 229-243.</p>
+<p>Prilla, M., Reuter, U., Schermann, M., Herrmann, T., Burr, W., and Krcmar, H. (2012): “Lessons Learned” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 245-258.</p>
+<p>Böhmann, T., Schermann, M., and Krcmar, H. (2012): “Modular Service Configuration for Identifying Value-Adding Services for Internationalization” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 155-167.</p>
+<p>Bennewitz, S., Böhmann, T., Burr, W., Herrmann, I. T., Krcmar, H., Prilla, M., Reuter, U., and Schermann, M. (2012): “The MARIS Toolkit in a Nutshell” in Implementing International Services: A Tailorable Method for Market Assessment, Modularization, and Process Transfer, Böhmann, T., Burr, W., Herrmann, T. and Krcmar, H. (eds.). Wiesbaden, Germany: Gabler, pp. 35-61.</p>
+<p>Wiesche, M., Schermann, M., and Krcmar, H. (2011): “Understanding the Role of Information Technology for Organizational Control Design: Risk Control as New Control Mechanism” in Governance and Sustainability in Information Systems: Managing the Transfer and Diffusion of IT, Nüttgens, M., Gadatsch, A., Kautz, K., Schirmer, I. and Blinn, N. (eds.). Berlin, Germany: Springer, pp. 135-152.</p>
+<p>Wiesche, M., Berwing, C., Schermann, M., and Krcmar, H. (2011): “Patterns for Understanding Control Requirements for Information Systems for Governance, Risk Management, and Compliance (GRC IS)” in Advanced Information Systems Engineering Workshops, Salinesi, C. and Pastor, O. (eds.). Berlin, Germany: Springer, pp. 208-217.</p>
+<p>Prilla, M., Reuter, U., Schermann, M., Herrmann, T., and Krcmar, H. (2011): “Model-Based Conflict Resolution in Service Internationalization:A Participatory Approach” in Internationale Unternehmungen und das Management ausländischer Tochtergesellschaften, Schmid, S. (ed.). Wiesbaden, Germany: Gabler, pp. 293-315.</p>
+<p>Schermann, M., Böhmann, T., and Krcmar, H. (2009): “Explicating Design Theories with Conceptual Models: Towards a Theoretical Role of Reference Models” in Wissenschaftstheorie und gestaltungsorientierte Wirtschaftsinformatik, Becker, J., Krcmar, H. and Niehaves, B. (eds.). Heidelberg, Germany: Physica, pp. 175-194.</p>
+<p>Krcmar, H., Schermann, M., Langer, P., and Böhmann, T. (2009): “Ein Referenzmodell für das Solution Data Management: Die integrierte Betrachtung von Produkt und Dienstleistung als Grundlage einer hybriden Arbeits-und Betriebsorganisation” in Digital Engineering: Herausforderung für die Arbeits-und Betriebsorganisation, Schenk, M. (ed.). Berlin, Germany: GITO, pp. 363-384.</p>
+<p>Böhmann, T., Prilla, M., Reuter, U., Schermann, M., Burr, W., Herrmann, T., and Krcmar, H. (2009): “Zusammenarbeit in internationalen Projekten: Internationalisierung von Dienstleistungen mit der MARIS-Methode” in Systematische Gestaltung von Leistungen und Prozessen in KMU: Voraussetzungen für die erfolgreiche Internationalisierung von Dienstleistungen, Borchert , M., Heinen, E. and Zühlke-Robinet, K. (eds.). Ingolstadt, Germany: Jochem Heizmann, pp. 7-37.</p>
+<p>Böhmann, T., Burr, W., Herrmann, T., Krcmar, H., Miller, R., Prilla, M., Reuter, U., Schermann, M., and Zeugner, S. (2008): “Exporting Services with Modular Service Architectures: Flexible Methods for Planning, Validating, and Implementing Services for International Markets” in Technologie und Dienstleistung: Innovationen in Forschung, Wissenschaft und Unternehmen, Gatermann, I. and Fleck, M. (eds.). Frankfurt, Germany: Campus, pp. 329-339.</p>
+<p>Taranovych, Y., Schermann, M., Schweiger, A., and Krcmar, H. (2007): “Enhancing Portal Design” in Encyclopedia of Portal Technologies and Applications, Tatnall, A. (ed.). Hershey, PA, USA: Information Science Reference, pp. 353-359.</p>
+<p>Böhmann, T., Schermann, M., and Krcmar, H. (2007): “Application-Oriented Evaluation of the SDM Reference Model: Framework, Instantiation and Initial Findings” in Reference Modeling, Becker, J. and Delfmann, P. (eds.). Heidelberg, Germany: Physica, pp. 123-144.</p>
+<p><br/><br/></p>
+</div>
+<div id="practitioner-student-oriented-publications" class="section level3">
+<h3>.practitioner &amp; student-oriented publications</h3>
+<p>Herzfeldt, A., Schermann, M., and Krcmar, H. (2012): “Ein Lebenszyklusmodell für IT-Lösungen aus Sicht kleiner und mittelständischer Anbieter”, HMD Praxis der Wirtschaftsinformatik (49:3), 43-51.</p>
+<p>Krcmar, H., Wiesche, M., Schermann, M., Grau, A., and Lauth, A. (2011): “Governance, Risikomanagement und Compliance (GRC): Systeme für Transparente Unternehmensführung”, Information Management &amp; Consulting (2011:26), 6-11.</p>
+<p>Krcmar, H., Wiesche, M., Schermann, M., Grau, A., and Lauth, A. (2011): “Gefahr erkannt - Gefahr gebannt”, SAP-Lösungen im Fokus (2011), 15.</p>
+<p>Ebner, W., Schermann, M., and Krcmar, H. (2005): “Spam: Technische Nebenwirkung oder Soziale Unfairness?”, IM-Die Fachzeitschrift für Information Management &amp; Consulting (20:1), 6-11.</p>
+<p>Greiffenberg, S., and Schermann, M. (2003): “Anforderungen an Theorien in der Wirtschaftsinformatik, Teil 2”, Wirtschaftswissenschaftliches Studium (32:11), 680-682.</p>
+<p>Greiffenberg, S., and Schermann, M. (2003): “Anforderungen an Theorien in der Wirtschaftsinformatik, Teil 1”, Wirtschaftswissenschaftliches Studium (32:10), 613-617.</p>
+<p>Kiss, C., Kosilek, E., and Schermann, M. (2000): <a href="http://dx.doi.org/10.1007/BF03250743">“Erfahrungen zum Einsatz von Electronic-Commerce-Standardsoftware im Rahmen der Wl-Ausbildung an der TU Dresden”</a>, <a href="http://link.springer.com/journal/12599">Wirtschaftsinformatik</a> (42:3), 275-278.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
