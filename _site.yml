@@ -23,7 +23,7 @@ navbar:
       href: https://twitter.com/m_icha
     - icon: fa-github
       href: https://github.com/mschermann
-    - icon: fa-align-left
+    - icon: fa-align-left 
       href: https://mschermann.github.io/serendipity/   
 
 output:
